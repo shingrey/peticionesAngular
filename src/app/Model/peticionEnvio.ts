@@ -1,5 +1,4 @@
-export class PeticionEnvio{
-    public tile:String;
-    public author:String;
-
+export class PeticionEnvio {
+    public title: String;
+    public author: String;
 }

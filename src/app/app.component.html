@@ -11,30 +11,41 @@
     <div class="mitad">
         <div class="peticiones">
             <h2>Peticion Post</h2>
-            <form>
-                <input type="text" placeholder="Titulo" />
-                <input type="text" placeholder="Autor" />
-                <button>Post</button>
+            <form (ngSubmit)="onSubmit(1);" #peticionForm="ngForm">
+                <input type="text" placeholder="Titulo" #title name="title" [(ngModel)]="peticion.title" required />
+                <input type="text" placeholder="Autor" #author name="author" [(ngModel)]="peticion.author" required/>
+                <button [disabled]="!peticionForm.form.valid">Post</button>
             </form>
 
         </div>
 
         <div class="peticiones">
             <h2>Peticion Get (todos)</h2>
-            <button>Get</button>
+            <button (click)="getPeticion()">Get</button>
         </div>
 
         <div class="peticiones">
             <h2>Peticion Put</h2>
-            <form>
-                <input type="number" placeholder="id" />
-                <input type="text" placeholder="Titulo" />
-                <input type="text" placeholder="Autor" />
+            <form (ngSubmit)="onSubmit(2,idPut)" #putForm="ngForm">
+                <input type="number" placeholder="id" #idPut (change)="onchange($event)" name="idPut" min="1" required/><br/>
+                <input type="text" placeholder="Titulo" #title2 name="title2" [(ngModel)]="peticionPut.title" required />
+                <input type="text" placeholder="Autor" #author2 name="author2" [(ngModel)]="peticionPut.author" required/>
                 <button>put</button>
             </form>
+
+
+
         </div>
     </div>
     <div class="mitad result">
+        <h3>Resultado</h3>
+        <div *ngFor="let resp of resultado ">
+            <p>id: {{ resp.id }}</p>
+            <p>Title: {{ resp.title }}</p>
+            <p>Author: {{ resp.author }}</p>
+            <hr>
+        </div>
+
 
     </div>
 

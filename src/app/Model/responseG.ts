@@ -1,5 +1,5 @@
 export class ResponseG{
     public id:number;
-    public tile:String;
+    public title:String;
     public author:String;
 }
