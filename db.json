@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "Hola Angular 5",
+      "author": "Cesar Flores",
+      "id": 2
+    },
+    {
+      "title": "Envio prueba 2",
+      "author": "Eduardo Ramon",
+      "id": 3
+    },
+    {
+      "title": "Peticion Post",
+      "author": "Un programador",
+      "id": 4
+    },
+    {
+      "title": "hola",
+      "author": "pueba",
+      "id": 5
+    },
+    {
+      "title": "hay",
+      "author": "hay",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
