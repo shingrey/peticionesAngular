@@ -21,7 +21,12 @@ export class AppComponent {
       this.postSentServices(this.peticion);
       break;
       case 2:
-      this.putSentServices(this.peticionPut, this.id);
+      if(this.peticionPut.author == null && this.peticionPut.title == null){
+        alert("llene todo los campos de put");
+
+      }else{
+        this.putSentServices(this.peticionPut, this.id);
+      }
       break;
     }
 }
